@@ -9,3 +9,5 @@ Route::get('/', function () {
 });
 
 Route::get('/products', [ProductController::class, 'allProducts']);
+
+Route::get('/products/{id}', [ProductController::class, 'getSingleProduct']);

@@ -18,4 +18,10 @@ class ProductController extends Controller
         }
         return view('products', ['products' => $products]);
     }
+    public function getSingleProduct(int $id) {
+        $product = Product::find($id);
+        var_dump($product);
+        return response ('hello world');
+    }
+
 }
